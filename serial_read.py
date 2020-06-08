@@ -12,5 +12,6 @@ except ConnectionError:
 while True:
 	time.sleep(1)
 	data_left = ser.inWaiting()  #check for remaining byte
-	read = ser.read(data_left)
-	print(read)
+	input = ser.read(data_left)
+	if input:
+		print(input)
