@@ -1,7 +1,7 @@
 import serial
 import time
 
-port = "/dev/ttyAMA0"
+port = "/dev/serial0"
 
 try:
 	ser = serial.Serial(port, 57600, timeout=1)
@@ -9,7 +9,6 @@ try:
 except ConnectionError:
 	print(f"Cannot connect to Serial {port}")
 
-read = 'xx'
 while True:
 	time.sleep(1)
 	data_left = ser.inWaiting()  #check for remaining byte

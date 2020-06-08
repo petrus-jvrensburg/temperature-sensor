@@ -2,7 +2,7 @@ from time import sleep
 from random import random
 import serial
 
-port = "/dev/ttyAMA0"
+port = "/dev/serial0"  # this works on rpi zero
 
 try:
 	ser = serial.Serial(port, 57600, timeout=1)
